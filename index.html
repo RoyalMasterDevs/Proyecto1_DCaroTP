@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diana's WEB</title>
+</head>
+<body>
+    <header>
+        <table>
+            <tr>
+                <td>
+                    <img src="img/Foto.jpg" width="150"/>
+                </td>
+                <td>
+                    <h1 id="titulo"> Diana Carolina Toledo Pérez </h1>
+                    <h2> Candidata SNI </h2>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <hr>
+    <section>
+        <p> Selecciona la opción que quieras ver </p>
+        <article class="opcion">
+            <h3>
+                Experiencia profesional
+            </h3>
+        </article>
+        <article class="opcion">
+            <h3>
+                Educación
+            </h3>
+        </article>
+        <article class="opcion">
+            <h3>
+                Idiomas
+            </h3>
+        </article>
+        <article class="opcion">
+            <h3>
+                Aptitudes
+            </h3>
+        </article>
+        <article class="opcion">
+            <h3>
+                Habilidades
+            </h3>
+        </article>
+    </section>
+    <hr>
+    <footer>
+        <form action="/informacion" method="POST">
+            <p> Contacto: </p>
+            <label for="nombre"> Nombre: </label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
+            <br>
+            <label for="email"> Enviar e-mail: </label>
+            <input type="email" id="email" name="email" placeholder="E-mail" />
+            <br>
+            <label> Enviar whatsapp: </label>
+            <input type="number" id="numero" name="numero" placeholder="Número" />
+            <br>
+            <label for="mensaje"> Mensaje: </label> <br>
+            <textarea cols="50" rows="5" id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
+            <br>
+            <button type="submit"> Enviar </button>
+        </form>
+        <p> Copyright 2023</p>
+        <a href="#titulo">Ir al inicio</a>
+    </footer>
+</body>
+</html>
