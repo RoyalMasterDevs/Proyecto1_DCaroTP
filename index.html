@@ -4,71 +4,297 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Labrada:wght@300&family=Mynerve&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
     <title>Diana's WEB</title>
+
+    <script src="https://kit.fontawesome.com/dd02847a1d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <table>
-            <tr>
-                <td>
-                    <img src="img/Foto.jpg" width="150"/>
-                </td>
-                <td>
-                    <h1 id="titulo"> Diana Carolina Toledo Pérez </h1>
-                    <h2> Candidata SNI </h2>
-                </td>
-            </tr>
-        </table>
-    </header>
-    <hr>
-    <section>
-        <p> Selecciona la opción que quieras ver </p>
-        <article class="opcion">
-            <h3>
-                Experiencia profesional
-            </h3>
-        </article>
-        <article class="opcion">
-            <h3>
-                Educación
-            </h3>
-        </article>
-        <article class="opcion">
-            <h3>
-                Idiomas
-            </h3>
-        </article>
-        <article class="opcion">
-            <h3>
-                Aptitudes
-            </h3>
-        </article>
-        <article class="opcion">
-            <h3>
-                Habilidades
-            </h3>
-        </article>
-    </section>
-    <hr>
-    <footer>
-        <form action="/informacion" method="POST">
-            <p> Contacto: </p>
-            <label for="nombre"> Nombre: </label>
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
-            <br>
-            <label for="email"> Enviar e-mail: </label>
-            <input type="email" id="email" name="email" placeholder="E-mail" />
-            <br>
-            <label> Enviar whatsapp: </label>
-            <input type="number" id="numero" name="numero" placeholder="Número" />
-            <br>
-            <label for="mensaje"> Mensaje: </label> <br>
-            <textarea cols="50" rows="5" id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
-            <br>
-            <button type="submit"> Enviar </button>
-        </form>
-        <p> Copyright 2023</p>
-        <a href="#titulo">Ir al inicio</a>
-    </footer>
+    <div class="cv">
+        <div class="aboutme">
+            <header class="aboutme_encabezado">
+                <table class="aboutme_tabla">
+                    <tr>
+                        <td align="center">
+                            <img class="aboutme_imagen" src="img/Foto.jpg" width="150">
+                        </td>
+                        <td>
+                            <h1 class="aboutme_titulo" id="titulo" name="titulo"> Diana Carolina Toledo Pérez </h1>
+                            <h2 class="aboutme_subtitulo"> Candidata SNI </h2>
+                        </td>
+                        <td>
+                            <div class="aboutme_iconos">
+                                <ul class="aboutme_lista">
+                                    <li><i class="fa-solid fa-location-dot"></i> Morelia, Michoacán</li>
+                                    <br>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/diana-carolina-toledo-pérez-3511a669/">
+                                            <img src="img/linkedin.png" width="18"/>    
+                                        </a>
+                                        <i class="fa-sharp fa-solid fa-share-nodes"></i>
+                                        <!-- FALTA AGREGAR EL BLOQUE PARA ELEGIR EL CONTACTO-->
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </header>
+        </div>
+        <hr>
+        <div class="secciones">
+            <!--
+            <nav class="secciones_enlaces">
+                <ul class="secciones_enlaces--listas">
+                    <li><a href="#experiencia_profesional">Experiencia profesional</a></li>
+                    <li><a href="#educacion">Educación</a></li>
+                    <li><a href="#idiomas">Idiomas</a></li>
+                    <li><a href="aptitudes">Aptitudes</a></li>
+                    <li><a href="habilidades">Habilidades</a></li>
+                </ul>
+            </nav>
+            -->
+            <div class="secciones_c1">
+                <article class="secciones_opcion">
+                    <a name="educacion"></a>
+                    <h3>
+                        <i class="fa-solid fa-gears"></i>
+                        EDUCACIÓN
+                    </h3>
+                    <table class="secciones_tabla">
+                        <tr class="secciones_tabla-tr">
+                            <div class="txt_fecha">
+                                2015 - 2021
+                            </div>
+                            <div class="txt_tit">
+                                Universidad Autónoma de Querétaro
+                            </div>
+                            <div class="txt_descrip">
+                                Doctorado en Ciencias de la Computación
+                            </div>
+                        </tr>
+                        <br>
+                        <tr class="secciones_tabla-tr">
+                            <div class="txt_fecha">
+                                2013 - 2015
+                            </div>
+                            <div class="txt_tit">
+                                Universidad Autónoma de Querétaro
+                            </div>
+                            <div class="txt_descrip">
+                                Maestría en Ingeniería Matemática
+                            </div>
+                        </tr>
+                        <br>
+                        <tr class="secciones_tabla-tr">
+                            <div class="txt_fecha">
+                                2006 - 2010
+                            </div>
+                            <div class="txt_tit">
+                                Universidad Autónoma de Querétaro
+                            </div>
+                            <div class="txt_descrip">
+                                Ingeniería en electromecánica
+                            </div>
+                        </tr>
+                    </table>
+                </article>
+                <article class="secciones_opcion">
+                    <a name="experiencia_profesional"></a>
+                    <h3>
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        EXPERIENCIA PROFESIONAL
+                    </h3>
+                    <table class="secciones_tabla">
+                        <tr>
+                            <div class="txt_fecha">
+                                08/19 - 06/22
+                            </div>
+                            <div class="txt_tit">
+                                Instituto Tecnológico de Morelia
+                            </div>
+                            <div class="txt_descrip">
+                                Docente de asignaturas: programación de aplicaciones, 
+                                electrónica digital y analógica, fundamentos de investigación, 
+                                y desarrollo de habilidades para el estudio.
+                            </div>
+                        </tr><br>
+                        <tr>
+                            <div class="txt_fecha">
+                                07/16 - 05/21
+                            </div>
+                            <div class="txt_tit">
+                                Consejo Nacional de Ciencia y Tecnología
+                            </div>
+                            <div class="txt_descrip">
+                                Desarrollo de sistemas de clasificación de movimientos 
+                                con señales mioléctricas, mediante la implementación 
+                                de algoritmos de clasificación en MATLAB, y el diseño 
+                                de dispositivos inalámbricos para la lectura de las 
+                                señales.
+                            </div>
+                        </tr><br>
+                        <tr>
+                            <div class="txt_fecha">
+                                06/12 - 12/18
+                            </div>
+                            <div class="txt_tit">
+                                Universidad Autónoma de Querétaro
+                            </div>
+                            <div class="txt_descrip">
+                                Docente de asignaturas: dinámica y física.<br>
+                                Docente de asignatura en preparatoria de probabilidad 
+                                y estadística.
+                            </div>
+                        </tr><br>
+                        <tr>
+                            <div class="txt_fecha">
+                                06/11 - 05/12
+                            </div>
+                            <div class="txt_tit">
+                                ACM Metal
+                            </div>
+                            <div class="txt_descrip">
+                                Asistente de ingeniería, encargada del desarrollo de 
+                                prototipos, elaboración de planos para fabricación de 
+                                piezas y planos de procesos.
+                            </div>
+                        </tr>
+                    </table>
+                </article>
+                <article class="secciones_opcion">
+                    <a name="idiomas"></a>
+                    <h3>
+                        <i class="fa-sharp fa-solid fa-comments"></i>
+                        IDIOMAS
+                    </h3>
+                    <div class="txt_tit">
+                        <ul>
+                            <li> Español: <span class="txt_tit--span"> Nativo </span> </li>
+                            <li> Inglés: <span class="txt_tit--span"> Intermedio </span> </li>
+                            <li> Francés: <span class="txt_tit--span"> Básico </span> </li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+            <div class="secciones_c2">
+                <article class="secciones_opcion">
+                    <a name="software"></a>
+                    <h3>
+                        <i class="fa-solid fa-puzzle-piece"></i>
+                        SOFTWARE
+                    </h3>
+                    <div class="skill">
+                        <p>Microsoft Office</p>
+                        <div class="skill-bar skill1 wow slideInLeft animated">
+                            <span class="skill-count">90%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>Programación en MATLAB & Simulink</p>
+                        <div class="skill-bar skill2 wow slideInLeft animated">
+                            <span class="skill-count">75%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>Programación en C & C++</p>
+                        <div class="skill-bar skill3 wow slideInLeft animated">
+                            <span class="skill-count">60%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>Dibujo en AutoCad & SolidWorks</p>
+                        <div class="skill-bar skill4 wow slideInLeft animated">
+                            <span class="skill-count">80%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>Diseño electrónico Eagle</p>
+                        <div class="skill-bar skill5 wow slideInLeft animated">
+                            <span class="skill-count">60%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>Programació en Android con Kotlin</p>
+                        <div class="skill-bar skill6 wow slideInLeft animated">
+                            <span class="skill-count">60%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>Programación Web React</p>
+                        <div class="skill-bar skill7 wow slideInLeft animated">
+                            <span class="skill-count">40%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>Programación en VHDL</p>
+                        <div class="skill-bar skill8 wow slideInLeft animated">
+                            <span class="skill-count">60%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>Robótica & Arduino</p>
+                        <div class="skill-bar skill9 wow slideInLeft animated">
+                            <span class="skill-count">70%</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="secciones_opcion">
+                    <a name="habilidades"></a>
+                    <h3>
+                        <i class="fa-solid fa-desktop"></i>
+                        HABILIDADES
+                    </h3>
+                    <ul class="secciones_lista">
+                        <li>✓ Fácil aprendizaje</li>
+                        <li>✓ Comunicativa</li>
+                        <li>✓ Analítica</li>
+                        <li>✓ Responsable</li>
+                        <li>✓ Organizada</li>
+                        <li>✓ Entusiasta</li>
+                        <li>✓ Comprometida</li>
+                        <li>✓ Puntual</li>
+                        <li>✓ Honesta</li>
+                        <li>✓ Trabajadora</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+        <hr>
+        <div class="contacto">
+            <footer>
+                <form class="contacto_form" action="/informacion" method="POST">
+                    <p class="contacto_p"> Contacto: </p>
+                    <label for="nombre">
+                        <i class="fa-solid fa-user"></i>
+                    </label>
+                    <input class="form_input" type="text" id="nombre" name="nombre" placeholder="Nombre" />
+                    <br>
+                    <label for="email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </label>
+                    <input class="form_input" type="email" id="email" name="email" placeholder="E-mail" />
+                    <br>
+                    <label>
+                        <i class="fa-solid fa-phone"></i>
+                    </label>
+                    <input class="form_input" type="number" id="numero" name="numero" placeholder="Número" />
+                    <br>
+                    <label for="mensaje"></label>
+                    <br>
+                    <textarea cols="50" rows="5" id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
+                    <br>
+                    <button class="contacto_boton" type="submit"> Enviar </button>
+                </form>
+                <p class="contacto_copyright"> Copyright 2023</p>
+                <a class="contacto_a" href="#titulo">Ir al inicio</a>
+            </footer>
+        </div>
+    </div>
 </body>
 </html>
