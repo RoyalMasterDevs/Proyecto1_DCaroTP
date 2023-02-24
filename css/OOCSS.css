@@ -1,0 +1,569 @@
+/* PALETA DE COLORES */
+:root {
+    --colorDeFondo: #000;
+    --colorHoverNav: rgb(129, 129, 129);
+    --colorFondoTarjeta: rgba(0, 0, 0, .9);
+    --colorBlanco: #fff;
+  }
+  
+  /* GLOBALES  */
+  html {}
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+    -moz-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+  
+  }
+  
+  body {
+    position: relative;
+  }
+  
+  section {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  
+  /* VIDEO DE FONDO */
+  video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 105%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
+    z-index: -2;
+  }
+  
+  .wrapper {
+    margin: 30px auto;
+    max-width: 90%;
+    /* margin-top: 20px;
+    margin-bottom: 20px; */
+  }
+  
+  .sombra {
+    padding: 2rem;
+    background-color: var(--colorFondoTarjeta);
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
+    -moz-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
+    box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
+  }
+  
+  a {
+    text-transform: uppercase;
+    color: var(--colorBlanco);
+    text-decoration: none;
+  }
+  
+  i {
+    display: inline-block;
+    width: 150px;
+  }
+  
+  a,
+  i {
+    cursor: pointer;
+    font-weight: 700;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--colorBlanco);
+  }
+  
+  p {
+    color: var(--colorBlanco);
+  }
+  
+  h1 {
+    font-weight: 700;
+  }
+  
+  .bottomTitle {
+    color: #dee3f1;
+  }
+  
+  .bottomParra {
+    color: #bfc3fd;
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  html {
+    background-color: #212123;
+    color: #EFEFEF;
+  }
+  
+  
+  /* Termina Globales */
+  
+  /* Barra de Navegación */
+  .navParent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    font-weight: 700;
+    font-size: 15px;
+    color: #010b6b;
+  }
+  
+  .navParent :hover {
+    background-color: var(--colorHoverNav);
+    color: black;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 20%;
+  }
+  
+  .nav__Link {
+    padding: 10px;
+  }
+  
+  @media (min-width: 768px) {
+    .navParent {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  
+    .navParent:hover {}
+  
+  }
+  
+  /* Termina Barra de Navegación */
+  /* TARJETAS */
+  .contenido {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    height: 313px;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 25px;
+    column-gap: 10px;
+  }
+  
+  /* .ContTarjeta {
+    padding: 50px;
+    scroll-snap-align: start;
+    border-radius: 50px;
+    width: 100%;
+    height: 278px;
+    
+  } */
+  
+  .tarjeta {
+    padding: 50px;
+    text-align: center;
+    scroll-snap-align: start;
+    border-radius: 50px;
+    width: 572px;
+    height: 172px;
+    border-radius: 20%;
+  }
+  
+  .tarjeta h2 {
+    margin-top: -40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  
+  
+  a>p {
+    text-transform: none;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  
+  .tarjeta:nth-child(1) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/vabajaScreenShot.png");
+    background-position: center center;
+    -webkit-filter: blur(2px);
+    transition: 1s ease;
+  }
+  
+  .tarjeta:nth-child(1):hover {
+    transition: 1s ease;
+    -webkit-filter: blur(0px);
+    cursor: pointer;
+  
+  }
+  
+  .tarjeta:nth-child(2) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/barrasdesignsScreenshot.png");
+    background-position: center center;
+    -webkit-filter: blur(2px);
+    transition: 1s ease;
+  }
+  
+  .tarjeta:nth-child(2):hover {
+    background-color: rgba(0, 0, 0, .3);
+    transition: 1s ease;
+    -webkit-filter: blur(0px);
+    cursor: pointer;
+  
+  }
+  
+  
+  .tarjeta:nth-child(3) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/mFrutosScreenShot.png");
+    background-position: center center;
+    -webkit-filter: blur(2px);
+    transition: 1s ease;
+  }
+  
+  .tarjeta:nth-child(3):hover {
+    background-color: rgba(0, 0, 0, .3);
+    transition: 1s ease;
+    -webkit-filter: blur(0px);
+    cursor: pointer;
+  
+  }
+  
+  .tarjeta:nth-child(4) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/JanRadaScreenShot.png");
+    background-position: center center;
+    -webkit-filter: blur(2px);
+    transition: 1s ease;
+  }
+  
+  .tarjeta:nth-child(4):hover {
+    background-color: rgba(0, 0, 0, .3);
+    transition: 1s ease;
+    -webkit-filter: blur(0px);
+    cursor: pointer;
+  
+  }
+  
+  .tarjeta:nth-child(5) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/PensioneConsultoria.png");
+    background-position: center center;
+    -webkit-filter: blur(2px);
+    transition: 1s ease;
+  }
+  
+  .tarjeta:nth-child(5):hover {
+    background-color: rgba(0, 0, 0, .3);
+    transition: 1s ease;
+    -webkit-filter: blur(0px);
+    cursor: pointer;
+  
+  }
+  
+  .tarjeta:nth-child(6) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/CesnaFluidPlatformScreenShot.png");
+    background-position: center center;
+    -webkit-filter: blur(2px);
+    transition: 1s ease;
+  }
+  
+  .tarjeta:nth-child(6):hover {
+    background-color: rgba(0, 0, 0, .3);
+    transition: 1s ease;
+    -webkit-filter: blur(0px);
+    cursor: pointer;
+  
+  }
+  /* .tarjeta:nth-child(7) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/MSantanaScreenShot.png");
+    background-position: center center;
+    -webkit-filter: blur(2px);
+    transition: 1s ease;
+  }
+  .tarjeta:nth-child(7):hover {
+    background-color: rgba(0, 0, 0, .3);
+    transition: 1s ease;
+    -webkit-filter: blur(0px);
+    cursor: pointer;
+  } */
+  @media (max-width: 768px) {
+    .tarjeta {
+      -webkit-filter: blur(0px) !important;
+    }
+  }
+  
+  /* TERMINA TARJETAS */
+  
+  /* Barra SKILLS */
+  
+  .skill {
+    margin-bottom: 35px;
+    position: relative;
+    overflow-x: hidden;
+  
+  }
+  
+  .skill>p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fcfcfc;
+    margin: 0;
+  
+  }
+  
+  .skill:before {
+    width: 100%;
+    height: 5px;
+    content: "";
+    display: block;
+    position: absolute;
+    background: #959595;
+    bottom: 0;
+  }
+  
+  .skill-bar {
+    width: 100%;
+    height: 5px;
+    background: #f4392f;
+    display: block;
+    position: relative;
+  }
+  
+  /* SKILL 1 */
+  .skill1 {
+    width: 90%;
+  
+  }
+  
+  .skill-bar span {
+    position: absolute;
+    border-top: 5px solid #f4392f;
+    top: -30px;
+    padding: 0;
+    font-size: 18px;
+    padding: 3px 0;
+    font-weight: 500;
+  }
+  
+  .skill-bar {
+    position: relative;
+  
+  }
+  
+  .skill1 .skill-count1 {
+    right: 0;
+  }
+  
+  /* SKILL 2 */
+  .skill2 {
+    width: 80%;
+  }
+  
+  .skill2 .skill-count2 {
+    right: 0;
+  }
+  
+  /* SKILL 3 */
+  .skill3 {
+    width: 50%;
+  }
+  
+  .skill3 .skill-count3 {
+    right: 0;
+  }
+  
+  /* SKILL 4 */
+  .skill4 {
+    width: 50%
+  }
+  
+  .skill4 .skill-count4 {
+    right: 0;
+  }
+  
+  /* SKILL 5 */
+  .skill5 {
+    width: 40%;
+  }
+  
+  .skill5 .skill-count5 {
+    right: 0;
+  }
+  
+  /* SKILL 6 */
+  .skill6 {
+    width: 50%
+  }
+  
+  .skill6 .skill-count6 {
+    right: 0;
+  }
+  
+  /* SKILL 7 */
+  .skill7 {
+    width: 40%
+  }
+  
+  .skill7 .skill-count7 {
+    right: 0;
+  }
+  
+  /* SKILL 8 */
+  .skill8 {
+    width: 70%
+  }
+  
+  .skill8 .skill-count8 {
+    right: 0;
+  }
+  
+  /* SKILL 9 */
+  .skill9 {
+    width: 40%
+  }
+  
+  .skill9 .skill-count9 {
+    right: 0;
+  }
+  
+  /* SKILL 10 */
+  .skill10 {
+    width: 60%
+  }
+  
+  .skill10 .skill-count10 {
+    right: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .skill>p {
+  
+      padding-bottom: 26px;
+    }
+  
+  }
+  
+  /* Termina BARRA SKILLS  */
+  
+  /* CERTIFICACIONES */
+  .contDiploma {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    height: 313px;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 25px;
+    column-gap: 10px;
+  }
+  
+  .diploma {
+    padding: 50px;
+    text-align: center;
+    scroll-snap-align: start;
+    border-radius: 50px;
+    width: 572px;
+    height: 172px;
+    border-radius: 20%;
+  }
+  
+  .diploma h2 {
+    margin-top: -40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  
+  
+  .diploma:nth-child(1) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/webdevScreenshot.png");
+    background-position: center center;
+    -webkit-filter: blur(2px);
+    transition: 1s ease;
+  }
+  
+  .diploma:nth-child(1):hover {
+    background-color: rgba(0, 0, 0, .3);
+    transition: 1s ease;
+    -webkit-filter: blur(0px);
+    cursor: pointer;
+  
+  }
+  
+  .diploma:nth-child(2) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/javascriptScreenshot.png");
+    background-position: center center;
+    -webkit-filter: blur(2px);
+    transition: 1s ease;
+  }
+  
+  .diploma:nth-child(2):hover {
+    background-color: rgba(0, 0, 0, .3);
+    transition: 1s ease;
+    -webkit-filter: blur(0px);
+    cursor: pointer;
+  
+  }
+  
+  .diploma:nth-child(3) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/reactjsScreenshot.png");
+    background-position: center center;
+    -webkit-filter: blur(2px);
+    transition: 1s ease;
+  }
+  
+  .diploma:nth-child(3):hover {
+    background-color: rgba(0, 0, 0, .3);
+    transition: 1s ease;
+    -webkit-filter: blur(0px);
+    cursor: pointer;
+  
+  }
+  
+  @media (max-width: 768px) {
+    .diploma {
+      -webkit-filter: blur(0px) !important;
+    }
+  }
+  
+  /* TERMINA DIPLOMAS */
+  
+  /* REDES */
+  .redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .redes {
+  
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
