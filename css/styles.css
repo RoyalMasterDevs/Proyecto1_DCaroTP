@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* +-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+-+-+
 |P|a|l|e|t|a| |d|e| |c|o|l|o|r|e|s|
 +-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+-+-+
@@ -233,4 +234,241 @@ textarea{
 /*
 @media (min-width: 768px) {
     
+=======
+/* +-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+-+-+
+|P|a|l|e|t|a| |d|e| |c|o|l|o|r|e|s|
++-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+-+-+
+ */
+
+:root {
+    --fondoDelSitio: rgb(8, 1, 37);
+    --colorHoverNav: rgb(129, 129, 129);
+}
+
+body{
+    font-family: 'Labrada', serif;
+    font-family: 'Mynerve', cursive;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--fondoDelSitio);
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+i{
+    padding: 10px 20px;
+    width: 16px;
+    margin-top: 0;
+}
+/*
++-+-+-+-+
+|B|o|d|y|
++-+-+-+-+
+*/
+.cv{
+    max-width: 1200px;
+}
+.aboutme{
+    max-width: 1200px;
+    padding: 10px;
+}
+.aboutme_imagen{
+    align-items: center;
+    border: 5px solid rgb(8, 1, 37);
+    border-radius: 150px;
+}
+.aboutme_encabezado{
+    background-color: rgb(230, 206, 175);
+}
+.aboutme_tabla{
+    align-content: center;
+    background-color: white;
+    width: 100%;
+}
+.aboutme_lista{
+    list-style-type: none;
+}
+.aboutme_titulo{
+    font-family: 'Mynerve', cursive;
+    font-size: 50px;
+    color: rgb(109, 109, 6);
+    text-align: center;
+}
+.aboutme_subtitulo{
+    color: blueviolet;
+    font-family: 'Mynerve', cursive;
+    text-align: center;
+}
+.secciones{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+    grid-gap: 10px;
+    width: auto;
+}
+.secciones_c1{
+    background-color: rgb(3, 10, 99);
+    width: 700px;
+}
+.secciones_enlaces{
+    background-color: darkmagenta;
+}
+.secciones_opcion{
+    color: rgb(175, 204, 238);
+    font-family: 'Labrada', serif;
+    font-size: 20px;
+    padding: 10px 50px;
+}
+.secciones_lista{
+    list-style-type: none;
+}
+.txt_fecha{
+    color: rgb(222, 228, 235);
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-size: 17px;
+}
+.txt_tit{
+    color: rgb(222, 228, 235);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+.txt_tit--span{
+    font-weight: normal;
+    font-style: italic;
+}
+.txt_descrip{
+    color: rgb(222, 228, 235);
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-size: 16px;
+}
+/*
++-+-+-+-+-+-+
+|F|o|o|t|e|r|
++-+-+-+-+-+-+
+*/
+.contacto{
+    background-color:rgb(8, 1, 37);
+    color: aquamarine;
+    padding: 10px;
+}
+.contacto_form{
+    padding-left: 10px;
+    padding-top: 5px;
+    margin-block: 10px;
+}
+.form_input{
+    margin-block: 10px;
+    padding: 10px 30px;
+    width: 250px;
+}
+textarea{
+    padding: 10px 30px;
+    width: 370px;
+}
+.contacto_boton{
+    align-items: flex-end;
+    margin-left: 317px;
+}
+.contacto_copyright{
+    color:  orange;
+    text-align: end;
+}
+.contacto_a{
+    color: #78b6f0;
+    text-align: end;
+    align-content: end;
+    display: inline;
+    margin-left: 1100px;
+    margin-bottom: 20px;
+    padding: 50px 0px;
+    text-shadow: 2px 4px 6px #78b6f0;
+}
+/*
++-+-+-+-+-+-+
+|B|a|r|r|a|s|
++-+-+-+-+-+-+
+*/
+.skill {
+    margin-bottom: 10px;
+    position: relative;
+}
+  
+.skill>p {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fcfcfc;
+    margin: 5px;
+  
+}
+  
+.skill:before {
+    width: 100%;
+    height: 10px;
+    content: "";
+    display: block;
+    position: absolute;
+    background: #959595;
+    bottom: 0;
+}
+  
+.skill-bar {
+    width: 100%;
+    height: 10px;
+    background: #036614;
+    display: block;
+    position: relative;
+}
+
+.skill-count {
+    right: -40px;
+}
+  
+.skill-bar span {
+    color: black;
+    font-weight: bolder;
+    position: absolute;
+    top: -9px;
+    font-size: 10px;
+    padding: 3px 0;
+    margin: 5px;
+}
+/* SKILLS */
+.skill1 {
+    width: 90%;
+}
+.skill2 {
+    width: 75%;
+}
+.skill3 {
+    width: 60%;
+}
+.skill4 {
+    width: 80%;
+}
+.skill5 {
+    width: 60%;
+}
+.skill6 {
+    width: 60%;
+}
+.skill7 {
+    width: 40%;
+}
+.skill8 {
+    width: 60%;
+}
+.skill9 {
+    width: 70%;
+}
+ 
+/*
+@media (min-width: 768px) {
+    
+>>>>>>> 2fb4a3785a7dfde6993af3ce3c529f288298a6d5
 }*/
