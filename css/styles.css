@@ -56,7 +56,7 @@ i{
 .aboutme_lista{
     list-style-type: none;
     display: flex; 
-    flex-direction: column;
+    justify-content: space-between;
 }
 .aboutme_titulo{
     font-family: 'Mynerve', cursive;
