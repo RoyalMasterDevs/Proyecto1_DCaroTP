@@ -52,8 +52,11 @@ i{
     background-color: white;
     width: 100%;
 }
+/*JB*/
 .aboutme_lista{
     list-style-type: none;
+    display: flex; 
+    flex-direction: column;
 }
 .aboutme_titulo{
     font-family: 'Mynerve', cursive;
