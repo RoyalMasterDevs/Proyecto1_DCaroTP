@@ -27,24 +27,47 @@
                             <h1 class="aboutme_titulo" id="titulo" name="titulo"> Diana Carolina Toledo Pérez </h1>
                             <h2 class="aboutme_subtitulo"> Candidata SNI </h2>
                         </td>
-                        <td>
+                        <td align="center">
                             <div class="aboutme_iconos">
                                <div class="icono">
                                 <i class="fa-solid fa-location-dot" ></i>
                                    <span>Morelia, Michoacán</span>
                                 </div>
                                 <ul class="aboutme_lista">
-                                    
                                     <br>
-                                    <li>
+                                    <li class="aboutme_link">
                                         <a href="https://www.linkedin.com/in/diana-carolina-toledo-pérez-3511a669/">
                                             <img src="img/linkedin.png" width="18"/>    
                                         </a>
                                     </li>
-                                    <li>
+                                    <li class="aboutme_link">
+                                        <a href="javascript:getlink();">
+                                            <i class="fa-solid fa-share-nodes"></i>
+                                            <script>
+                                                function getlink() {
+                                                var aux = document.createElement("input");
+                                                aux.setAttribute("value",window.location.href);
+                                                document.body.appendChild(aux);
+                                                aux.select();
+                                                document.execCommand("copy");
+                                                document.body.removeChild(aux);
+                                                var css = document.createElement("style");
+                                                var estilo = document.createTextNode("#aviso {position:fixed; z-index: 9999999; width: 85px; top:30%;left:50%;margin-left: -60px;padding: 10px; background: #7c3eee;border-radius: 5px;font-size: 12px;font-family: sans-serif;color: white;}");
+                                                css.appendChild(estilo);
+                                                document.head.appendChild(css);
+                                                var aviso = document.createElement("div");
+                                                aviso.setAttribute("id", "aviso");
+                                                var contenido = document.createTextNode("Enlace copiado");
+                                                aviso.appendChild(contenido);
+                                                document.body.appendChild(aviso);
+                                                window.load = setTimeout("document.body.removeChild(aviso)", 1000);
+                                                }
+                                            </script>
+                                        </a>
+                                    </li>
+                                    <li class="aboutme_link">
                                         <a>
-                                        <i class="fa-solid fa-share-nodes"></i>
-                                        <!-- FALTA AGREGAR EL BLOQUE PARA ELEGIR EL CONTACTO-->
+                                            <i class="fa-brands fa-github"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -180,9 +203,9 @@
                     <h3>
                         <!--<i class="fa-sharp fa-solid fa-comments"></i>-->
                         <i><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-messages" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
-  <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
+                            <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
                             </svg></i>
                         IDIOMAS
                     </h3>
@@ -281,43 +304,37 @@
         <hr>
         <div class="contacto">
             <footer>
-                <form class="contacto_form" action="/informacion" method="POST">
+                <!-- <form class="contacto_form" action="/informacion" method="POST"> -->
+                <form class="contacto_form" action="mailto:dctp.14@gmail.com" method="POST">
                     <h3 class="contacto_p"> Contacto: </h3>
-                    <div class="input">
-                        <!--display:flex;
-                            justify-content:center;-->
-                        <div class="icon">
+                    <div class="contacto_container">
+                        <div class="icono icono1">
                             <i class="fa-solid fa-user"></i>
                         </div>
-                        <div class="input2">
-                            <!--display:flex;
-                                flex-direction:column;"--> 
+                        <div class="input input1">
                             <label for="nombre"></label>
                             <input class="form_input" type="text" id="nombre" name="nombre" placeholder="Nombre" />
                         </div>
-                        
+                        <div class="icono icono2">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="input input2">
+                            <label for="email"></label>
+                            <input class="form_input" type="email" id="email" name="email" placeholder="E-mail" />
+                        </div>
+                        <!-- <div class="icono icono3">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="input input3">
+                            <input class="form_input" type="number" id="numero" name="numero" placeholder="Número" />
+                        </div> -->
                     </div>
-                    
-                    
-                        
-                    
-                    
-                    <br>
-                    <label for="email">
-                        <i class="fa-solid fa-envelope"></i>
-                    </label>
-                    <input class="form_input" type="email" id="email" name="email" placeholder="E-mail" />
-                    <br>
-                    <label>
-                        <i class="fa-solid fa-phone"></i>
-                    </label>
-                    <input class="form_input" type="number" id="numero" name="numero" placeholder="Número" />
-                    <br>
                     <label for="mensaje"></label>
                     <br>
                     <textarea cols="50" rows="5" id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
                     <br>
-                    <button class="contacto_boton" type="submit"> Enviar </button>
+                    <input name="submit" type="submit" value="Enviar">
+                    <!-- <button class="contacto_boton" type="submit"> Enviar </button> -->
                 </form>
                 <p class="contacto_copyright"> Copyright 2023</p>
                 <a class="contacto_a" href="#titulo">Ir al inicio</a>
