@@ -14,6 +14,7 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color: var(--fondoDelSitio);
     font-weight: 400;
+    max-width: 100%;
 }
 a{
     text-decoration: none;
@@ -32,10 +33,10 @@ i{
 +-+-+-+-+
 */
 .cv{
-    max-width: 1200px;
+    max-width: 100%;
 }
 .aboutme{
-    max-width: 1200px;
+    max-width: 100%;
     padding: 10px;
 }
 .aboutme_imagen{
@@ -57,7 +58,9 @@ i{
 .aboutme_lista{
     list-style-type: none;
     display: flex; 
+    flex-wrap: wrap;
     justify-content: center;
+    align-content: center;
     padding: 10px;
 }
 .aboutme_link{
@@ -78,16 +81,38 @@ i{
     text-align: center;
 }
 .secciones{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
     padding: 10px;
     grid-gap: 10px;
-    width: auto;
+    width: 100%;
 }
+
 .secciones_c1{
+    width: 100%;
     background-color: rgb(3, 10, 99);
-    width: 700px;
 }
+
+.secciones_c2{
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .secciones {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: auto;
+    }
+    .secciones_c1{
+        width: 100%;
+    }
+    .secciones_c2{
+        width: 100%;
+    }
+
+  }
 .secciones_enlaces{
     background-color: darkmagenta;
 }
@@ -170,7 +195,7 @@ textarea{
     text-align: end;
     align-content: end;
     display: inline;
-    margin-left: 1100px;
+    margin-left: 50%;
     margin-bottom: 20px;
     padding: 50px 0px;
     text-shadow: 2px 4px 6px #78b6f0;
