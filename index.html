@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
    <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,63 +19,59 @@
     <div class="cv">
         <div class="aboutme">
             <header class="aboutme_encabezado">
-                <table class="aboutme_tabla">
-                    <tr>
-                        <td align="center">
-                            <img class="aboutme_imagen" src="img/Foto.jpg" width="150">
-                        </td>
-                        <td>
-                            <h1 class="aboutme_titulo" id="titulo" name="titulo"> Diana Carolina Toledo Pérez </h1>
-                            <h2 class="aboutme_subtitulo"> Candidata SNI </h2>
-                        </td>
-                        <td align="center">
-                            <div class="aboutme_iconos">
-                               <div class="icono">
-                                <i class="fa-solid fa-location-dot" ></i>
-                                   <span>Morelia, Michoacán</span>
-                                </div>
-                                <ul class="aboutme_lista">
-                                    <br>
-                                    <li class="aboutme_link">
-                                        <a href="https://www.linkedin.com/in/diana-carolina-toledo-pérez-3511a669/">
-                                            <img src="img/linkedin.png" width="18"/>    
-                                        </a>
-                                    </li>
-                                    <li class="aboutme_link">
-                                        <a href="javascript:getlink();">
-                                            <i class="fa-solid fa-share-nodes"></i>
-                                            <script>
-                                                function getlink() {
-                                                var aux = document.createElement("input");
-                                                aux.setAttribute("value",window.location.href);
-                                                document.body.appendChild(aux);
-                                                aux.select();
-                                                document.execCommand("copy");
-                                                document.body.removeChild(aux);
-                                                var css = document.createElement("style");
-                                                var estilo = document.createTextNode("#aviso {position:fixed; z-index: 9999999; width: 85px; top:30%;left:50%;margin-left: -60px;padding: 10px; background: #7c3eee;border-radius: 5px;font-size: 12px;font-family: sans-serif;color: white;}");
-                                                css.appendChild(estilo);
-                                                document.head.appendChild(css);
-                                                var aviso = document.createElement("div");
-                                                aviso.setAttribute("id", "aviso");
-                                                var contenido = document.createTextNode("Enlace copiado");
-                                                aviso.appendChild(contenido);
-                                                document.body.appendChild(aviso);
-                                                window.load = setTimeout("document.body.removeChild(aviso)", 1000);
-                                                }
-                                            </script>
-                                        </a>
-                                    </li>
-                                    <li class="aboutme_link">
-                                        <a href="https://github.com/DCaroTP">
-                                            <i class="fa-brands fa-github"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
+                <div class="aboutme_tabla">
+                    <div class="aboutme_foto">
+                        <img class="aboutme_imagen" src="img/Foto.jpg">
+                    </div>
+                    <div class="aboutme_titulos">
+                        <h1> Diana Carolina Toledo Pérez </h1>
+                        <h2> Candidata SNI </h2>
+                    </div>
+                    <div class="aboutme_iconos">
+                        <div class="icono">
+                            <i class="fa-solid fa-location-dot" ></i>
+                               <span>Morelia, Michoacán</span>
+                        </div>
+                        <ul class="aboutme_lista">
+                        <br>
+                            <li class="aboutme_link">
+                                <a href="https://www.linkedin.com/in/diana-carolina-toledo-pérez-3511a669/">
+                                    <img src="img/linkedin.png" width="18"/>    
+                                </a>
+                            </li>
+                            <li class="aboutme_link">
+                                <a href="javascript:getlink();">
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                    <script>
+                                        function getlink() {
+                                        var aux = document.createElement("input");
+                                        aux.setAttribute("value",window.location.href);
+                                        document.body.appendChild(aux);
+                                        aux.select();
+                                        document.execCommand("copy");
+                                        document.body.removeChild(aux);
+                                        var css = document.createElement("style");
+                                        var estilo = document.createTextNode("#aviso {position:fixed; z-index: 9999999; width: 85px; top:30%;left:50%;margin-left: -60px;padding: 10px; background: #7c3eee;border-radius: 5px;font-size: 12px;font-family: sans-serif;color: white;}");
+                                        css.appendChild(estilo);
+                                        document.head.appendChild(css);
+                                        var aviso = document.createElement("div");
+                                        aviso.setAttribute("id", "aviso");
+                                        var contenido = document.createTextNode("Enlace copiado");
+                                        aviso.appendChild(contenido);
+                                        document.body.appendChild(aviso);
+                                        window.load = setTimeout("document.body.removeChild(aviso)", 1000);
+                                        }
+                                    </script>
+                                </a>
+                            </li>
+                            <li class="aboutme_link">
+                                <a href="https://github.com/DCaroTP">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </header>
         </div>
         <hr>
