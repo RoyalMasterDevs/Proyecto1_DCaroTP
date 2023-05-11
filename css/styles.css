@@ -14,6 +14,7 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color: var(--fondoDelSitio);
     font-weight: 400;
+    max-width: 100%;
 }
 a{
     text-decoration: none;
@@ -32,13 +33,20 @@ i{
 +-+-+-+-+
 */
 .cv{
-    max-width: 1200px;
+    max-width: 100%;
 }
 .aboutme{
-    max-width: 1200px;
+    max-width: 100%;
+    padding: 10px;
+}
+.aboutme_foto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 10px;
 }
 .aboutme_imagen{
+    width: 100px;
     align-items: center;
     border: 5px solid rgb(8, 1, 37);
     border-radius: 150px;
@@ -47,17 +55,22 @@ i{
     background-color: rgb(230, 206, 175);
 }
 .aboutme_tabla{
+    justify-content: center;
     align-content: center;
     background-color: white;
     width: 100%;
 }
 .aboutme_iconos{
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
 .aboutme_lista{
     list-style-type: none;
     display: flex; 
+    flex-wrap: wrap;
     justify-content: center;
+    align-content: center;
     padding: 10px;
 }
 .aboutme_link{
@@ -66,28 +79,95 @@ i{
 .aboutme_link a{
     color: black;
 }
-.aboutme_titulo{
+.aboutme h1{
     font-family: 'Mynerve', cursive;
-    font-size: 50px;
+    font-size: 30px;
     color: rgb(109, 109, 6);
     text-align: center;
 }
-.aboutme_subtitulo{
+.aboutme h2{
     color: blueviolet;
     font-family: 'Mynerve', cursive;
     text-align: center;
+    font-size: 20px;
+}
+@media (min-width: 500px) {
+    .aboutme_tabla{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+    .aboutme_foto{
+        grid-column: 1/1;
+        grid-row: 1;
+        padding: 10px;
+    }
+    .aboutme_titulos{
+        grid-column: 2/6;
+        grid-row: 1;
+    }
+    .aboutme_iconos{
+        grid-column: 6/6;
+        grid-row: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .aboutme_imagen{
+        width: 150px;
+        align-self: start;
+        border: 5px solid rgb(8, 1, 37);
+        border-radius: 150px;
+    }
+    .aboutme h1{
+        font-family: 'Mynerve', cursive;
+        font-size: 50px;
+        color: rgb(109, 109, 6);
+        text-align: center;
+    }
+    .aboutme h2{
+        color: blueviolet;
+        font-family: 'Mynerve', cursive;
+        text-align: center;
+        font-size: 30px;
+    }
 }
 .secciones{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
     padding: 10px;
     grid-gap: 10px;
-    width: auto;
+    width: 100%;
 }
+
 .secciones_c1{
+    width: 100%;
     background-color: rgb(3, 10, 99);
-    width: 700px;
 }
+
+.secciones_c2{
+    width: 100%;
+}
+
+@media (min-width: 500px) {
+    .secciones {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: auto;
+    }
+    .secciones_c1{
+        width: 100%;
+    }
+    .secciones_c2{
+        width: 100%;
+    }
+
+  }
 .secciones_enlaces{
     background-color: darkmagenta;
 }
@@ -157,6 +237,7 @@ textarea{
     padding: 10px 30px;
     width: 370px;
 }
+
 .contacto_boton{
     align-items: flex-end;
     margin-left: 317px;
@@ -170,7 +251,7 @@ textarea{
     text-align: end;
     align-content: end;
     display: inline;
-    margin-left: 1100px;
+    margin-left: 50%;
     margin-bottom: 20px;
     padding: 50px 0px;
     text-shadow: 2px 4px 6px #78b6f0;
